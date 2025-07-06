@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Programmer's Guild - 未来を創るAI技術を学ぶコミュニティ</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #50e3c2;
+            --dark-bg: #282c34;
+            --light-bg: #3a3f4b;
+            --text-color: #f0f0f0;
+            --text-muted: #a0a0a0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .main-header {
+            background: rgba(0,0,0,0.2);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .main-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(45deg, rgba(74, 144, 226, 0.1), rgba(80, 227, 194, 0.1));
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--text-muted);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item .icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+        }
+
+        /* How it works Section */
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .step {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .step .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: 3px solid var(--light-bg);
+        }
+
+        .step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--light-bg);
+            text-align: center;
+            border-radius: 15px;
+            padding: 60px 30px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        .main-footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--light-bg);
+        }
+        
+        .main-footer p {
+            color: var(--text-muted);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">AI Programmer's Guild</div>
+            <nav class="main-nav">
+                <a href="#features">特徴</a>
+                <a href="#how-it-works">始め方</a>
+                <a href="#cta">参加する</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>未来を創るAI技術を、仲間と共に。</h1>
+            <p>AI Programmer's Guildは、初心者から実践者までが集い、学び、創造する日本最大級のAIプログラミング学習コミュニティです。</p>
+            <a href="#cta" class="cta-button">今すぐコミュニティに参加する</a>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">コミュニティの特徴</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon">🚀</div>
+                        <h3>最先端のカリキュラム</h3>
+                        <p>業界のトップランナーが監修したカリキュラムで、機械学習の基礎から最新のLLM応用まで体系的に学べます。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🤝</div>
+                        <h3>頼れるメンター陣</h3>
+                        <p>現役のAIエンジニアがあなたの学習をサポート。コードレビューやキャリア相談も気軽にできます。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">💡</div>
+                        <h3>実践的なプロジェクト</h3>
+                        <p>チームを組んで実社会の課題に取り組むプロジェクトに参加し、ポートフォリオを充実させることができます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="section" style="background-color: var(--light-bg);">
+            <div class="container">
+                <h2 class="section-title">学習の始め方</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>登録</h3>
+                        <p>簡単なフォーム入力でアカウントを作成。すぐにコミュニティに参加できます。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>参加</h3>
+                        <p>専用のDiscordサーバーに参加し、自己紹介。同じ目標を持つ仲間と繋がろう。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>学習開始</h3>
+                        <p>自分のレベルに合ったコースを選択し、学習を開始。イベントや勉強会にも参加しよう。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="section">
+            <div class="container">
+                <div class="cta-section">
+                    <h2>あなたもAIで未来を創造する一員になりませんか？</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 30px;">知識と経験を共有し、共に成長できる場所がここにあります。</p>
+                    <a href="#" class="cta-button">無料でコミュニティに参加</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 AI Programmer's Guild. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
