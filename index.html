@@ -217,6 +217,53 @@
             color: var(--text-muted);
         }
 
+        /* Contact Form */
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--light-bg);
+            border: 1px solid #4a4f5a;
+            border-radius: 8px;
+            color: var(--text-color);
+            font-size: 1rem;
+            box-sizing: border-box; /* Added for consistent sizing */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .cta-button {
+            width: 100%;
+            max-width: 250px;
+            margin: 0 auto;
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -228,6 +275,7 @@
                 <a href="#features">特徴</a>
                 <a href="#how-it-works">始め方</a>
                 <a href="#cta">参加する</a>
+                <a href="#contact">お問い合わせ</a>
             </nav>
         </div>
     </header>
@@ -292,6 +340,24 @@
                     <p style="color: var(--text-muted); margin-bottom: 30px;">知識と経験を共有し、共に成長できる場所がここにあります。</p>
                     <a href="#" class="cta-button">無料でコミュニティに参加</a>
                 </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ</h2>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="お名前" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="メールアドレス" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">送信</button>
+                </form>
             </div>
         </section>
     </main>
